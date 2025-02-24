@@ -20,4 +20,3 @@ jobs:
           pip install -r ./cats_dogs_other/requirements.txt
           pip install -r ./cats_dogs_other/label/requirements.txt
           python -m unittest
-          
