@@ -8,7 +8,6 @@ jobs:
   train:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - name: Set up Python 3.11
         uses: actions/setup-python@v3
         with:
@@ -20,3 +19,5 @@ jobs:
           pip install -r ./cats_dogs_other/requirements.txt
           pip install -r ./cats_dogs_other/label/requirements.txt
           python -m unittest
+
+
