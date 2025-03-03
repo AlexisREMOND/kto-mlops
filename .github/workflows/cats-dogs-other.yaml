@@ -8,6 +8,15 @@ jobs:
   train:
     runs-on: ubuntu-latest
     steps:
-      - name: Première step d'intro !!
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+      - name: Upgrade pip, install packages and run unittests
         run: |
-          echo "COUCOU !"
+          pip install --upgrade pip
+          ./init_packages.sh
+          pip install -r ./cats_dogs_other/requirements.txt
+          pip install -r ./cats_dogs_other/label/requirements.txt
+          python -m unittest
