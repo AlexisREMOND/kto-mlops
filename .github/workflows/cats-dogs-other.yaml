@@ -51,5 +51,6 @@ jobs:
       - name: Asleep kto-mlflow with dailyclean
         run: |
           curl -X POST ${{vars.DAILYCLEAN_ROUTE}}/pods/stop
+          
       
       
