@@ -192,3 +192,5 @@ async def create_project(project: Project, api_information: ApiInformation):
         async with session.post(f'{api_url}/Projects', headers=headers, json=payload) as response:
             print(f'Create project status: {response.status}')
             print(await response.text())
+
+            
