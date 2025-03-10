@@ -193,4 +193,3 @@ async def create_project(project: Project, api_information: ApiInformation):
             print(f'Create project status: {response.status}')
             print(await response.text())
 
-            
